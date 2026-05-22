@@ -1,0 +1,21 @@
+Dataset Name : Iris Dataset
+
+Classes :
+- Setosa
+- Versicolor
+- Virginica
+
+Features :
+- Sepal Length
+- Sepal Width
+- Petal Length
+- Petal Width
+
+Total Samples :
+150
+
+Algorithms Used :
+- KNN
+- Logistic Regression
+- Decision Tree
+- Random Forest
