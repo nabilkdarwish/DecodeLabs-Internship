@@ -1,58 +1,39 @@
 # AI Model Comparison Dashboard
 
-Project 2 from DecodeLabs Industrial Training Program.
+A Python command-line project that trains and compares four classifiers on the Iris dataset. It was developed as Project 2 during the DecodeLabs Industrial Training Program.
 
-## Features
+## What it does
 
-- Multiple AI Models
-- Accuracy Comparison
-- Rich Terminal Dashboard
-- Machine Learning Classification
-- Data Visualization
-- Model Evaluation
+- Trains K-Nearest Neighbors, Logistic Regression, Decision Tree, and Random Forest classifiers.
+- Presents holdout accuracy in a Rich terminal dashboard.
+- Displays the highest-scoring model and a terminal accuracy chart.
 
----
+## Evaluation approach
 
-## Algorithms Used
+The project uses scikit-learn's built-in Iris dataset (150 samples, four numeric features, and three species classes). All models use the same stratified 75/25 train/test split with a fixed random seed, so repeated runs produce the same comparison. Standard scaling is fitted inside a pipeline for KNN and Logistic Regression; the tree-based models use the original feature values.
 
-- KNN
-- Logistic Regression
-- Decision Tree
-- Random Forest
+The dashboard reports accuracy on one holdout split. This is a small educational comparison, not a production benchmark; cross-validation and a larger, representative dataset would be needed for stronger conclusions.
 
----
+## Requirements
 
-## Libraries
+- Python 3.9 or newer
+- Packages listed in requirements.txt
 
-- Scikit-Learn
-- Rich
-- Matplotlib
-- Pandas
-- NumPy
+## Run locally
 
----
-
-## Run Project
-
-Install Libraries
-
-```bash
+~~~bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-```
-
-Run
-
-```bash
 python main.py
-```
+~~~
 
----
+## Project files
 
-## Dataset
-
-Iris Dataset
-
----
+- main.py — command-line entry point
+- model.py — reproducible split, model pipelines, and accuracy evaluation
+- ui.py — Rich comparison table and best-model panel
+- charts.py — terminal accuracy visualization
 
 ## Author
 
